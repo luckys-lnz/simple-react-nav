@@ -1,14 +1,7 @@
-function Services() {
+const Services = () => {
 
-  return (
+  return <h1>services we render</h1>
 
-    <div>
+};
 
-      <h3>our Services</h3>
-      
-    </div>
-
-  );
-}
-
-export default Services;
+export default Services

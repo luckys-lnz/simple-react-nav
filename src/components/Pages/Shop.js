@@ -1,14 +1,7 @@
-function Shop() {
+const Shop = () => {
 
-  return (
-
-    <div>
-
-      <h3>shop here</h3>
-      
-    </div>
-
-  );
-}
+  return <h1>Shop with us </h1>
+  
+};
 
 export default Shop;

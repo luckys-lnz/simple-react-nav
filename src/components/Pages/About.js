@@ -1,14 +1,7 @@
-function About() {
+const About = () => {
 
-  return (
+  return <h1>About this website</h1>
 
-    <div>
-
-      <h3>About us</h3>
-      
-    </div>
-
-  );
-}
+};
 
 export default About;

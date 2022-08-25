@@ -1,26 +1,50 @@
+import { Outlet, Link } from 'react-router-dom'
+
+// import {BrowserRouter,Route,Routes} from 'react-router-dom'
+
 function Nav() {
+
+  const navStyle = {
+
+    color: 'white'
+
+  };
 
   return (
 
-    <div>
+    <>
 
-      <nav className="nav">
+      <nav className='nav'>
 
-        <h2>logo</h2>
+        <Link style={navStyle} to="/"><h1 >Logo</h1></Link>
 
-      <ul className="nav-links">
+        <ul className='nav-links'>
 
-          <li>About</li>
-          
-          <li>Services</li>
-          
-          <li>Shop</li>
-          
+          <li>
+
+            <Link style={navStyle} to="/about">About</Link>
+
+          </li>
+
+          <li>
+
+            <Link style={navStyle} to="/services">Services</Link>
+
+          </li>
+
+          <li>
+
+            <Link style={navStyle} to="/shop">Shop</Link>
+
+          </li>
+
         </ul>
-        
+
       </nav>
 
-    </div>
+      <Outlet />
+      
+    </>
 
   );
 

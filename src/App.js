@@ -1,37 +1,44 @@
-import './App.css';
+import './App.css'
 
-import Nav from './components/Nav';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Services from './components/Pages/Services';
+import Nav from "./components/Nav";
 
-import Shop from './components/Pages/Shop';
+import Home from "./components/Pages/Home";
 
-import About from './components/Pages/About';
+import About from "./components/Pages/About";
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Services from "./components/Pages/Services";
+
+import Shop from "./components/Pages/Shop";
+
 
 function App() {
-
+   
   return (
 
-   <Router>
-
-    <div>
-
-      <Nav />
+    <BrowserRouter>
       
-        <Route path='/about' component={About}></Route>
+      <Routes>
 
-        <Route path='/shop' component={Shop}></Route>
+        <Route path="/" element={<Nav />}>
 
-        <Route path='/services' component={Services}></Route>
-      
-      </div>
-     
-    </Router>
+          <Route index element={<Home />} />
+
+          <Route path="about" element={<About />} />
+
+          <Route path="services" element={<Services />} />
+
+          <Route path="shop" element={<Shop />} />
+
+        </Route>
+
+      </Routes>
+
+    </BrowserRouter>
 
   );
+  
+ }
 
-}
-
-export default App;
+ export default App
